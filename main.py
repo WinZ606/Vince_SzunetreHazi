@@ -12,5 +12,6 @@ feladatok.feladat5()
 lista = feladatok.feladat6_lista()
 feladatok.feladat6_1(lista)
 feladatok.feladat6_2_3(lista)
-feladatok.feladat6_4_5(lista)"""
-feladatok.feladat7()
+feladatok.feladat6_4_5(lista)
+feladatok.feladat7()"""
+feladatok.feladat8()

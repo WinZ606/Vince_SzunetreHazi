@@ -115,20 +115,21 @@ def feladat6_4_5(lista):
     print(f"A lista legnagyobb eleme: {max(lista)}")
 
 def feladat7():
-    nevek = str
+    nevek = ""
     nevek2 = []
     nevekszam = 0
     print("Kérek neveket!")
     while nevek != "@":
         nevek = str(input(""))
-        nevek2.append(nevek)
-        nevekszam += 1
+        if nevek != "@":
+            nevek2.append(nevek)
+            nevekszam += 1
 
-    print(f"Ennyi név lett megadva: {nevekszam-1}")
+    print(f"Ennyi név lett megadva: {nevekszam}")
 
     o = 0
     elsobetu = []
-    while o < (nevekszam-1):
+    while o < (nevekszam):
         elsobetu.append(nevek2[o][0].upper())
         o += 1
 
@@ -138,7 +139,58 @@ def feladat7():
         print("Nincs A betűbel kezdődő név!")
     
     nevhossz = []
-    for i in range(0,(nevekszam-1),1):
+    for i in range(0,(nevekszam),1):
         nevhossz.append(len(nevek2[i]))
-        
-    print(f"A leghosszabb név: {nevek2[max(nevhossz)]}")
+
+    legnev = nevhossz.index(max(nevhossz))
+    melyiknev = nevek2[legnev]
+    if nevekszam > 0:
+        print(f"A {legnev}. név a leghosszabb, vagyis {melyiknev}")
+    else:
+        print("Nincs megadott név!")
+
+"""def feladat8():
+    fszam = 0
+    o = 0
+    sorozat = 0
+    p = 10
+    print("Fej vagy írás: (f/i)")
+    for i in range(0,p,1):
+        fi = str(input(""))
+        if fi == "f" or fi == "i":
+            if fi == "f":
+                fszam += 1
+        else:
+            fi = str(input("Fej (f) vagy írás (i) lehet csak!\n"))
+            p += 1
+    while o < p:
+        if o < (p-1):
+            if fi[o] == fi[(o+1)]:
+                sorozat += 1
+        o += 1"""
+def feladat8():
+    fszam = 0  
+    sorozat1 = 0  
+    sorozat2 = 0
+    p = 10
+    eredmenyek = []
+
+    for i in range(0,p,1):
+        fi = input("Fej vagy írás: (f/i)\n").lower()
+        if fi == "f" or fi == "i":
+            eredmenyek.append(fi)
+        else:
+            print("Fej (f) vagy írás (i) lehet csak!")
+
+    for o in range(0,len(eredmenyek),1):
+        if eredmenyek[o] == "f":
+            fszam += 1
+            sorozat2 += 1
+            if sorozat2 > sorozat1:
+                sorozat1 = sorozat2
+        else:
+            sorozat2 = 0  
+
+    print(f"Összes fej dobás: {fszam}")
+    print(f"Leghosszabb fej sorozat: {sorozat1}")
+
