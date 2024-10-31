@@ -194,3 +194,32 @@ def feladat8():
     print(f"Összes fej dobás: {fszam}")
     print(f"Leghosszabb fej sorozat: {sorozat1}")
 
+def feladat9():
+    print("Szorzótábla:")
+    print("*"*49)
+    
+    for i in range(1, 11):
+        for o in range(1, 11):
+            print(f"{i * o:4}", end=" ")
+        print()
+
+def feladat10_1(szam):
+    eredmenyek = []
+    helyi = 1
+
+    while helyi <= szam:
+        darab = szam // helyi
+        eredmenyek.append(darab % 10)
+        helyi *= 10
+
+    return eredmenyek
+
+def feladat10_2(eredmeny,szam):
+    helyi = 1
+    i = 0
+    while helyi <= szam:
+        if i < len(eredmeny):
+            db = eredmeny[i]
+        print(f"{helyi}-esek: {db}")
+        helyi *= 10
+        i += 1

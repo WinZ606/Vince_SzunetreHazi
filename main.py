@@ -13,5 +13,9 @@ lista = feladatok.feladat6_lista()
 feladatok.feladat6_1(lista)
 feladatok.feladat6_2_3(lista)
 feladatok.feladat6_4_5(lista)
-feladatok.feladat7()"""
+feladatok.feladat7()
 feladatok.feladat8()
+feladatok.feladat9()"""
+szam = 12345
+eredmeny = (feladatok.feladat10_1(szam))
+feladatok.feladat10_2(eredmeny,szam)
