@@ -1,6 +1,6 @@
 import feladatok
 
-"""feladatok.feladat1()
+feladatok.feladat1()
 oraszam = int(input(f"Hányadik órára vagy kíváncsi?\n"))
 feladatok.feladat2(oraszam)
 print(f"1. -> Hétfő\n2. -> Kedd\n3. -> Szerda\n4. -> Csütörtök\n5. -> Péntek\n")
@@ -15,7 +15,7 @@ feladatok.feladat6_2_3(lista)
 feladatok.feladat6_4_5(lista)
 feladatok.feladat7()
 feladatok.feladat8()
-feladatok.feladat9()"""
+feladatok.feladat9()
 szam = 12345
 eredmeny = (feladatok.feladat10_1(szam))
 feladatok.feladat10_2(eredmeny,szam)
